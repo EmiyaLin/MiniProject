@@ -16,7 +16,7 @@ public class ButtomText extends JPanel {
         numTextField1.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 String key = numTextField1.getText();
-                int count = 10;
+                int count = 25;
                 String value = getLimit(key, count);
                 if (value.indexOf(e.getKeyChar()) < 0)
                     e.consume();
@@ -28,7 +28,7 @@ public class ButtomText extends JPanel {
         numTextField2.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 String key = numTextField2.getText();
-                int count = 10;
+                int count = 25;
                 String value = getLimit(key, count);
                 if (value.indexOf(e.getKeyChar()) < 0)
                     e.consume();
@@ -51,7 +51,7 @@ public class ButtomText extends JPanel {
         jPanel.add(button);
     }
 
-    private static String string(int a, int b) {
+    private String string(int a, int b) {
         String value = "";
         for (int i = a; i <= b; i++)
             value += String.valueOf(i);

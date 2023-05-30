@@ -5,7 +5,7 @@ import java.awt.*;
 public class RabbitImage extends Image {
     public RabbitImage() {
         super();
-        image.setLayout(new GridLayout(0, 3));
+        image.setLayout(new GridLayout(0, 4));
 
     }
 

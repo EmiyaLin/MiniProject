@@ -2,10 +2,10 @@ package org.Task2;
 
 import javax.swing.*;
 
-public class numTextField extends JTextField {
+public class NumTextField extends JTextField {
     JTextField jTextField;
 
-    public numTextField() {
+    public NumTextField() {
         jTextField = new JTextField(3);
     }
     

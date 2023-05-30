@@ -27,7 +27,7 @@ public class MainFrame {
         this.topText = new TopText();
         this.image1 = new RabbitImage();
         this.image2 = new RabbitImage();
-        this.plusImage = new PlusImage("Task1//img//plus.png");
+        this.plusImage = new PlusImage("Task2//img//plus.png");
         this.buttomText = new ButtomText();
     }
 
@@ -51,12 +51,12 @@ public class MainFrame {
     public void addRabbitImage() {
 
         for (int i = 1; i <= randomNumber1; i ++) {
-            this.image1.addImages("Task1//img//rabbit.jpg");
+            this.image1.addImages("Task2//img//rabbit.jpg");
         }
 //        mainFrame.add(this.image1.image, BorderLayout.WEST);
 
         for (int i = 1; i <= randomNumber2; i ++) {
-            this.image2.addImages("Task1//img//rabbit.jpg");
+            this.image2.addImages("Task2//img//rabbit.jpg");
         }
 //        mainFrame.add(this.image2.image, BorderLayout.EAST);
     }

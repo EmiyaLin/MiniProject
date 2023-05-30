@@ -8,11 +8,11 @@ import java.awt.event.ActionListener;
 public class MainFrame {
     protected JFrame mainFrame;
 
-    protected int maxn = 25;
-    protected int randomNumber1 = (int)(Math.random() * maxn + 1);
-    protected int randomNumber2 = (int)(Math.random() * maxn + 1);
+    protected int maxn;
+    protected int randomNumber1;
+    protected int randomNumber2;
 
-//    private JPanel panel_center = new JPanel(new GridLayout(1, 1, 0, 0));
+    // private JPanel panel_center = new JPanel(new GridLayout(1, 1, 0, 0));
 
     protected TopText topText;
 
@@ -21,15 +21,18 @@ public class MainFrame {
     private RabbitImage image1, image2;
     private ButtomText buttomText;
 
-    public MainFrame() {
+    public MainFrame(int num) {
         mainFrame = new JFrame("Welcome to Sum it up!");
+        this.maxn = num;
+        randomNumber1 = (int) (Math.random() * this.maxn + 1);
+        randomNumber2 = (int) (Math.random() * this.maxn + 1);
     }
 
     public void init() {
         this.topText = new TopText();
         this.image1 = new RabbitImage();
         this.image2 = new RabbitImage();
-        this.plusImage = new PlusImage("Task1//img//plus.png");
+        this.plusImage = new PlusImage("ExtraCredit//img//plus.png");
         this.buttomText = new ButtomText();
     }
 
@@ -40,50 +43,54 @@ public class MainFrame {
         this.mainFrame.add(plusImage.panel, BorderLayout.CENTER);
         this.mainFrame.add(buttomText.jPanel, BorderLayout.SOUTH);
     }
+
     public void setUp() {
         mainFrame.setBounds(400, 200, 800, 500);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        mainFrame.pack();
+        // mainFrame.pack();
     }
 
     public void show() {
         mainFrame.setVisible(true);
     }
+
     public void addRabbitImage() {
 
-        for (int i = 1; i <= randomNumber1; i ++) {
-            this.image1.addImages("Task1//img//rabbit.jpg");
+        for (int i = 1; i <= randomNumber1; i++) {
+            this.image1.addImages("ExtraCredit//img//rabbit.jpg");
         }
-//        mainFrame.add(this.image1.image, BorderLayout.WEST);
+        // mainFrame.add(this.image1.image, BorderLayout.WEST);
 
-        for (int i = 1; i <= randomNumber2; i ++) {
-            this.image2.addImages("Task1//img//rabbit.jpg");
+        for (int i = 1; i <= randomNumber2; i++) {
+            this.image2.addImages("ExtraCredit//img//rabbit.jpg");
         }
-//        mainFrame.add(this.image2.image, BorderLayout.EAST);
+        // mainFrame.add(this.image2.image, BorderLayout.EAST);
     }
 
-//    public void addPlusImage() {
-//        this.plusImage = new PlusImage("C:\\Users\\Zhao\\Desktop\\MiniProject\\src\\main\\java\\org\\Task1\\plus.png");
-////        plus.addImages("C:\\Users\\Zhao\\Desktop\\MiniProject\\src\\main\\java\\org\\Task1\\plus.png");
-////        this.plusImage.image.setLayout(new GridLayout(0,0));
-////        mainFrame.add(plusImage.image, BorderLayout.CENTER);
-////        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Zhao\\Desktop\\MiniProject\\src\\main\\java\\org\\Task1\\plus.png");
-////        JLabel jLabel = new JLabel();
-////        jLabel.setIcon(imageIcon);
-////        panel_center.add(jLabel);
-////        mainFrame.add(panel_center, BorderLayout.CENTER);
-//
-//    }
+    // public void addPlusImage() {
+    // this.plusImage = new
+    // PlusImage("C:\\Users\\Zhao\\Desktop\\MiniProject\\src\\main\\java\\org\\Task1\\plus.png");
+    //// plus.addImages("C:\\Users\\Zhao\\Desktop\\MiniProject\\src\\main\\java\\org\\Task1\\plus.png");
+    //// this.plusImage.image.setLayout(new GridLayout(0,0));
+    //// mainFrame.add(plusImage.image, BorderLayout.CENTER);
+    //// ImageIcon imageIcon = new
+    // ImageIcon("C:\\Users\\Zhao\\Desktop\\MiniProject\\src\\main\\java\\org\\Task1\\plus.png");
+    //// JLabel jLabel = new JLabel();
+    //// jLabel.setIcon(imageIcon);
+    //// panel_center.add(jLabel);
+    //// mainFrame.add(panel_center, BorderLayout.CENTER);
+    //
+    // }
 
-//    public void addTopText() {
-//        this.topText = new TopText();
-////        mainFrame.add(this.topText.topTextWord, BorderLayout.NORTH);
-//    }
+    // public void addTopText() {
+    // this.topText = new TopText();
+    //// mainFrame.add(this.topText.topTextWord, BorderLayout.NORTH);
+    // }
 
     public void addTopText(String string) {
         this.topText = new TopText(string);
-//        mainFrame.add(this.topText.topTextWord, BorderLayout.NORTH);
+        // mainFrame.add(this.topText.topTextWord, BorderLayout.NORTH);
     }
 
     public void addButtomText() {
@@ -92,11 +99,11 @@ public class MainFrame {
         buttomText.button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JTextField a = (JTextField)buttomText.jPanel.getComponent(0);
+                JTextField a = (JTextField) buttomText.jPanel.getComponent(0);
                 String stringa = a.getText();
-                JTextField b = (JTextField)buttomText.jPanel.getComponent(2);
+                JTextField b = (JTextField) buttomText.jPanel.getComponent(2);
                 String stringb = b.getText();
-                JTextField c = (JTextField)buttomText.jPanel.getComponent(4);
+                JTextField c = (JTextField) buttomText.jPanel.getComponent(4);
                 String stringc = c.getText();
                 if (stringa.equals("") || stringb.equals("") || stringc.equals(""))
                     return;
@@ -123,8 +130,7 @@ public class MainFrame {
                     a.setText("");
                     b.setText("");
                     c.setText("");
-                }
-                else {
+                } else {
                     topText.word.setText("Wrong! Try again!");
                 }
             }

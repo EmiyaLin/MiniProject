@@ -50,7 +50,7 @@ public class ButtomText extends JPanel {
         jPanel.add(button);
     }
 
-    private static String string(int a, int b) {
+    private String string(int a, int b) {
         String value = "";
         for (int i = a; i <= b; i++)
             value += String.valueOf(i);
@@ -60,7 +60,8 @@ public class ButtomText extends JPanel {
     private String getLimit(String key, int num) {
         // 示例讲解：key = "13" count = 135
         String value = String.valueOf(num); // value = "135";
-        int a[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, b = num;
+        int[] a = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int b = num;
         // b = 135,a[] = {0,……};
         int len = key.length(), length = value.length();
         // len = 2,length = 3;
@@ -71,7 +72,7 @@ public class ButtomText extends JPanel {
         if (key.equals(""))
             in = 0;
         else
-            in = Integer.valueOf(key) * 10;
+            in = Integer.parseInt(key) * 10;
         // in = 130;
         if (len < length - 1) {
             if (len == 0)
