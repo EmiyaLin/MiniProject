@@ -102,7 +102,7 @@ public class MainFrame {
                 int numb = Integer.parseInt(stringb);
                 int numc = Integer.parseInt(stringc);
                 if (numa == randomNumber1 && numb == randomNumber2 && numc == randomNumber1 + randomNumber2) {
-                    System.out.println("true");
+                    // System.out.println("true");
                     topText.word.setText("Correct! Have another go?");
                     image1.image.removeAll();
                     image1.image.revalidate();
