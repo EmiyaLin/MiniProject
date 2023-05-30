@@ -6,12 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * The ButtomText class represents a JPanel object with a FlowLayout for displaying text fields and a check button.
+ */
 public class ButtomText extends JPanel {
     protected JPanel jPanel;
     protected JButton button;
 
+    /**
+     * Constructs a ButtomText object with a FlowLayout.
+     */
     public ButtomText() {
-//        ArrayList<numTextField> arrayList = new ArrayList<numTextField>();
         jPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JTextField numTextField1 = new JTextField(2);
         jPanel.add(numTextField1);

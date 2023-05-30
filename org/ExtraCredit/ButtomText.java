@@ -5,13 +5,19 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+ * A panel that displays the bottom text and a check button.
+ */
 public class ButtomText extends JPanel {
     protected JPanel jPanel;
     protected JButton button;
 
+    /**
+     * Constructs a ButtomText object.
+     */
     public ButtomText() {
-//        ArrayList<numTextField> arrayList = new ArrayList<numTextField>();
         jPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
         JTextField numTextField1 = new JTextField(2);
         numTextField1.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
@@ -23,7 +29,9 @@ public class ButtomText extends JPanel {
             }
         });
         jPanel.add(numTextField1);
+
         jPanel.add(new JLabel("+"));
+
         JTextField numTextField2 = new JTextField(2);
         numTextField2.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
@@ -35,7 +43,9 @@ public class ButtomText extends JPanel {
             }
         });
         jPanel.add(numTextField2);
+
         jPanel.add(new JLabel("="));
+
         JTextField numTextField3 = new JTextField(2);
         numTextField3.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
@@ -47,10 +57,18 @@ public class ButtomText extends JPanel {
             }
         });
         jPanel.add(numTextField3);
+
         button = new JButton("Check!");
         jPanel.add(button);
     }
 
+    /**
+     * Returns a string representation of numbers between a and b (inclusive).
+     *
+     * @param a the starting number
+     * @param b the ending number
+     * @return a string representation of numbers between a and b
+     */
     private String string(int a, int b) {
         String value = "";
         for (int i = a; i <= b; i++)
@@ -58,6 +76,13 @@ public class ButtomText extends JPanel {
         return value;
     }
 
+    /**
+     * Returns a limited string based on the key and count.
+     *
+     * @param key the key string
+     * @param num the count
+     * @return a limited string based on the key and count
+     */
     private String getLimit(String key, int num) {
         // 示例讲解：key = "13" count = 135
         String value = String.valueOf(num); // value = "135";
