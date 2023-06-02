@@ -60,7 +60,7 @@ public class MainFrame {
      * Sets up the main frame.
      */
     public void setUp() {
-        mainFrame.setBounds(400, 200, 800, 500);
+        mainFrame.setBounds(400, 200, 900, 900);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
