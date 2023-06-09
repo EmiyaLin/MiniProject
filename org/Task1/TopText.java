@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * class for the top text
  */
-public class TopText extends JLabel {
+public class TopText {
     protected JPanel topTextWord;
     protected JLabel word;
 

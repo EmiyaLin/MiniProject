@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /**
  * The ButtomText class represents a JPanel object with a FlowLayout for displaying text fields and a check button.
  */
-public class ButtomText extends JPanel {
+public class ButtomText {
     protected JPanel jPanel;
     protected JButton button;
 

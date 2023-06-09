@@ -5,7 +5,7 @@ import javax.swing.*;
 /**
  * The Image class is an abstract class that is extended by the RabbitImage class and PlusImage class.
  */
-public class Image extends JPanel {
+public class Image {
     protected JPanel image;
 
     /**
