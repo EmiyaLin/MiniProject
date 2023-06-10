@@ -37,10 +37,11 @@ java -cp .\ExtraCredit\class .\ExtraCredit\Main.java <a number between 10 and 25
 * You need to fill in the two numbers being added on either side of the plus sign in the bottom text boxes based on the quantity of rabbit pictures on the left and right sides. Then, fill in the sum of those numbers in the text box to the right of the equals sign, then click the button.
 
   * if your answer is right, you will see the top text change to "Correct! Have an another go?", and you can repeat the sum practice
-      ![right](./Task1_right.png)
+       ![right](./Task1_right.png)
 
   * if your answer is wrong, you will see the top text change to "Wrong! Try again!". You need to check your answers, including the addends and the sum. Then try again.
-      ![wrong](./Task1_wrong.png)
+       
+    ![wrong](./Task1_wrong.png)
 
 ## About Imporvement in Task2 and ExtraCredit
 
